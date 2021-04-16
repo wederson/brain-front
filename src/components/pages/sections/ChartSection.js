@@ -195,22 +195,10 @@ class ChartSection extends Component {
               </MDBCol>
               <MDBCol md="4" className="mb-4">
                 <MDBCard className="mb-4">
-                  <MDBCardHeader>Agricultores x Estados</MDBCardHeader>
+                  <MDBCardHeader>Hectares x Tipo de Terreno</MDBCardHeader>
                   <MDBCardBody>
                     <Pie
                       data={dataArea}
-                      height={300}
-                      options={{ responsive: true }}
-                    />
-                  </MDBCardBody>
-                </MDBCard>
-              </MDBCol>
-              <MDBCol md="4" className="mb-4">
-                <MDBCard className="mb-4">
-                  <MDBCardHeader>Agricultores x Estados</MDBCardHeader>
-                  <MDBCardBody>
-                    <Pie
-                      data={dataPie}
                       height={300}
                       options={{ responsive: true }}
                     />

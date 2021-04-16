@@ -13,15 +13,15 @@ import "../../index.css";
 class AgriculturistRegisterPage extends Component {
   state = {
     id: 0,
-    cpf: "10523760701",
-    name: "rio de janeiro ",
-    ranch_name: "tste teste",
-    ranch_city: "rio de janeiro",
-    ranch_state: "rio de janeiro",
+    cpf: "",
+    name: "",
+    ranch_name: "",
+    ranch_city: "",
+    ranch_state: "",
     ranch_total_area: 10,
     ranch_total_arable_area: 5,
     ranch_total_vegetation_area: 5,
-    ranch_crops_planted: "algodão",
+    ranch_crops_planted: "Soja, Milho, Algodão, Café, Cana de Açucar",
     valided: false,
     redirect: false,
   };
