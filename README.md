@@ -1,19 +1,24 @@
-# mdbreact-admin-template-free
+# Introdução
 
-> MDB - React Admin Dashboard Free
+
+O projeto foi desenvolvido em cima do template mdbreact-admin para não precisar criar os componentes do zero e focar nas funcionalidades.
 
 ## Build Setup
 
 ``` bash
-# install dependencies
-yarn
+npm install
+npm start
+```
 
-# serve with hot reload at localhost:8080
-yarn start
+> As chamadas de backend estão apontando para a URL http://127.0.0.1:3333.
+Caso deseje trocar, basta acessar src/services/api.js.
 
-# build for production with minification
-yarn build
+```
+import axios from "axios";
 
-# build for production and view the bundle analyzer report
-yarn build --report
+const api = axios.create({
+  baseURL: "http://127.0.0.1:3333"
+});
+
+export default api;
 ```
