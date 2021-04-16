@@ -4,43 +4,30 @@ import {
   MDBCol, 
   MDBInput, 
   MDBBtn, 
-  MDBNotification,
+  MDBNotification 
 } from "mdbreact";
 import api from "../../services/api";
+import { Redirect } from "react-router-dom";
 import "../../index.css";
 
-class AgriculturistEditPage extends Component {
+class AgriculturistRegisterPage extends Component {
   state = {
     id: 0,
-    cpf: "",
-    name: "",
-    ranch_name: "",
-    ranch_city: "",
-    ranch_state: "",
-    ranch_total_area: 0,
-    ranch_total_arable_area: 0,
-    ranch_total_vegetation_area: 0,
-    ranch_crops_planted: "",
+    cpf: "10523760701",
+    name: "rio de janeiro ",
+    ranch_name: "tste teste",
+    ranch_city: "rio de janeiro",
+    ranch_state: "rio de janeiro",
+    ranch_total_area: 10,
+    ranch_total_arable_area: 5,
+    ranch_total_vegetation_area: 5,
+    ranch_crops_planted: "algodão",
     valided: false,
-  };
-
-  componentDidMount() {
-    this.loadAgriculturist();
-  }
-
-  loadAgriculturist = async (match) => {
-    try {
-      const {
-        match: { params },
-      } = this.props;
-      const response = await api.get(`/agriculturists/${params.id}`);
-      this.setState({ ...response.data });
-    } catch (err) {
-      console.log(err);
-    }
+    redirect: false,
   };
 
   submitHandler = async (event) => {
+    event.persist();
     event.preventDefault();
     try {
       var inputVegetation = document.querySelector(
@@ -63,8 +50,10 @@ class AgriculturistEditPage extends Component {
         inputArable.classList.add("invalid");
         inputTotal.classList.add("invalid");
       } else {
-        await api.put(`/agriculturists/${this.state.id}`, this.state);
+        const agriculturist = await api.post(`/agriculturists`, this.state);
         this.setState({ valided: true });
+        this.setState({ redirect: true });
+        this.setState({ id: agriculturist.data.id });
 
         inputVegetation.classList.remove("invalid");
         inputArable.classList.remove("invalid");
@@ -81,7 +70,16 @@ class AgriculturistEditPage extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  componentWillUnmount() {
+    this.setState = (state, callback) => {
+      return;
+    };
+  }
+
   render() {
+    if (this.state.redirect && this.state.id !== 0) {
+      return <Redirect to={{ pathname: "/agricultores/" + this.state.id }} />;
+    }
     return (
       <React.Fragment>
         {this.state.valided && (
@@ -226,4 +224,4 @@ class AgriculturistEditPage extends Component {
   }
 }
 
-export default AgriculturistEditPage;
+export default AgriculturistRegisterPage;

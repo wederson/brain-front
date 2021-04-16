@@ -22,18 +22,6 @@ const TopNavigation = () => {
                         Agricultores
                     </MDBListGroupItem>
                 </NavLink>
-                <NavLink to="/tables" activeClassName="activeClass">
-                    <MDBListGroupItem>
-                        <MDBIcon icon="table" className="mr-3"/>
-                        Tables
-                    </MDBListGroupItem>
-                </NavLink>
-                <NavLink to="/404" activeClassName="activeClass">
-                    <MDBListGroupItem>
-                        <MDBIcon icon="exclamation" className="mr-3"/>
-                        404
-                    </MDBListGroupItem>
-                </NavLink>
             </MDBListGroup>
         </div>
     );

@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import DashboardPage from './pages/DashboardPage';
 import AgriculturistPage from './pages/AgriculturistPage';
 import AgriculturistEditPage from './pages/AgriculturistEditPage';
-import TablesPage from './pages/TablesPage';
+import AgriculturistRegisterPage from './pages/AgriculturistRegisterPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 class Routes extends React.Component {
@@ -12,9 +12,9 @@ class Routes extends React.Component {
       <Switch>
         <Route path='/' exact component={DashboardPage} />
         <Route path='/dashboard' component={DashboardPage} />
+        <Route exact path='/agricultores' component={AgriculturistPage} />
+        <Route exact path='/agricultores/cadastro' component={AgriculturistRegisterPage} />
         <Route path='/agricultores/:id' component={AgriculturistEditPage} />
-        <Route path='/agricultores' component={AgriculturistPage} />
-        <Route path='/tables' component={TablesPage} />
         <Route path='*' component={NotFoundPage} />
       </Switch>
     );
