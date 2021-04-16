@@ -42,6 +42,9 @@ main {
   padding-top: 0;
 }
 
+.sidebar-fixed a {
+  background:rgba(0,0,0,0.8);
+}
 
 .flexible-navbar {
   transition: padding-left 0.5s;
@@ -212,6 +215,12 @@ main {
   }
 }
 
+.was-validated .invalid~.valid-feedback {
+  display: none !important
+}
+.was-validated .form-control {
+  background: none !important
+}
 
 
 
