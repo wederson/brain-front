@@ -99,7 +99,7 @@ class AgriculturistRegisterPage extends Component {
               <MDBInput
                 value={this.state.cpf}
                 name="cpf"
-                onChange={() => this.changeHandler()}
+                onChange={this.changeHandler}
                 type="text"
                 id="materialFormRegisterNameEx"
                 label="CPF do produtor"
@@ -112,7 +112,7 @@ class AgriculturistRegisterPage extends Component {
               <MDBInput
                 value={this.state.name}
                 name="name"
-                onChange={() => this.changeHandler()}
+                onChange={this.changeHandler}
                 type="text"
                 id="materialFormRegisterNameEx"
                 label="Nome do produtor"
@@ -127,7 +127,7 @@ class AgriculturistRegisterPage extends Component {
               <MDBInput
                 value={this.state.ranch_name}
                 name="ranch_name"
-                onChange={() => this.changeHandler()}
+                onChange={this.changeHandler}
                 type="text"
                 id="materialFormRegisterNameEx"
                 label="Nome da fazenda"
@@ -140,7 +140,7 @@ class AgriculturistRegisterPage extends Component {
               <MDBInput
                 value={this.state.ranch_city}
                 name="ranch_city"
-                onChange={() => this.changeHandler()}
+                onChange={this.changeHandler}
                 type="text"
                 id="materialFormRegisterNameEx"
                 label="Cidade da Fazenda"
@@ -153,7 +153,7 @@ class AgriculturistRegisterPage extends Component {
               <MDBInput
                 value={this.state.ranch_state}
                 name="ranch_state"
-                onChange={() => this.changeHandler()}
+                onChange={this.changeHandler}
                 type="text"
                 id="materialFormRegisterNameEx"
                 label="Estado da Fazenda"
@@ -166,7 +166,7 @@ class AgriculturistRegisterPage extends Component {
               <MDBInput
                 value={this.state.ranch_total_area}
                 name="ranch_total_area"
-                onChange={() => this.changeHandler()}
+                onChange={this.changeHandler}
                 type="number"
                 id="ranch_total_area"
                 label="Área total da Fazenda"
@@ -179,7 +179,7 @@ class AgriculturistRegisterPage extends Component {
               <MDBInput
                 value={this.state.ranch_total_arable_area}
                 name="ranch_total_arable_area"
-                onChange={() => this.changeHandler()}
+                onChange={this.changeHandler}
                 type="number"
                 id="ranch_total_arable_area"
                 label="Área agricultável da Fazenda"
@@ -192,7 +192,7 @@ class AgriculturistRegisterPage extends Component {
               <MDBInput
                 value={this.state.ranch_total_vegetation_area}
                 name="ranch_total_vegetation_area"
-                onChange={() => this.changeHandler()}
+                onChange={this.changeHandler}
                 type="number"
                 id="ranch_total_vegetation_area"
                 label="Área de vegetação da Fazenda"
@@ -205,7 +205,7 @@ class AgriculturistRegisterPage extends Component {
               <MDBInput
                 value={this.state.ranch_crops_planted}
                 name="ranch_crops_planted"
-                onChange={() => this.changeHandler()}
+                onChange={this.changeHandler}
                 type="text"
                 id="materialFormRegisterNameEx"
                 label="Culturas plantadas"
